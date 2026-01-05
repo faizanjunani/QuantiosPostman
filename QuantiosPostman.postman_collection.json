@@ -106,7 +106,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}",
+					"raw": "{\n  \"username\": \"\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -162,6 +162,40 @@
 					]
 				},
 				"description": "Generated from cURL: curl -X 'GET' \\\n  'https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=faizan' \\\n  -H 'accept: application/json'"
+			},
+			"response": []
+		},
+		{
+			"name": "User not found to list items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=fai",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_get"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "fai"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=fai' \\\n--header 'accept: application/json'"
 			},
 			"response": []
 		}
