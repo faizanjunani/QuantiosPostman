@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "2541a258-270e-4a12-9c7f-c1501439402e",
+		"name": "QuantiosPostman",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51258257",
+		"_collection_link": "https://faizan-junani11-1262158.postman.co/workspace/Faizan-Junani's-Workspace~7fa0c2e0-9a8d-48da-8b6d-97cf9b1630d7/collection/51258257-2541a258-270e-4a12-9c7f-c1501439402e?action=share&source=collection_link&creator=51258257"
+	},
+	"item": [
+		{
+			"name": "Successfully Add to Watchlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_post"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://qainterview.netlify.app/.netlify/functions/watchlist_post' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "User Not Found",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"aa\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_post"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://qainterview.netlify.app/.netlify/functions/watchlist_post' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Missing Required Fields",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_post"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'https://qainterview.netlify.app/.netlify/functions/watchlist_post' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"username\": \"Farizam\",\n  \"symbol\": \"AAPL\",\n  \"name\": \"Apple Inc.\",\n  \"price\": 150.54,\n  \"change\": 0.5,\n  \"change_percent\": 0.5\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "List of Watchlist Items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=faizan",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_get"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "faizan"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=faizan' \\\n  -H 'accept: application/json'"
+			},
+			"response": []
+		}
+	]
+}
